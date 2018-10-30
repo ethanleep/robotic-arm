@@ -1,0 +1,1 @@
+Both of these files are needed for hard movement programming. d_custom is the void loop statement where all the custom movement code goes so if needed you can add it to the Custom_movement file to save yourself a file.
