@@ -1,0 +1,174 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Arduino_Mega-cache
+LIBS:w_connectors
+LIBS:motor_drivers
+LIBS:L293D
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Arduino_Mega_Header J1
+U 1 1 5B9283A2
+P 3800 2300
+F 0 "J1" H 3800 3550 60  0000 C CNN
+F 1 "Arduino_Mega_Header" H 3800 1050 60  0000 C CNN
+F 2 "" H 3800 2300 60  0000 C CNN
+F 3 "" H 3800 2300 60  0000 C CNN
+	1    3800 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L L293D IC?
+U 1 1 5B928651
+P 9850 1650
+F 0 "IC?" H 9449 2491 50  0000 L BNN
+F 1 "L293D" H 9449 748 50  0000 L BNN
+F 2 "DIL16" H 9850 1650 50  0001 L BNN
+F 3 "SOIC-20 STMicroelectronics" H 9850 1650 50  0001 L BNN
+F 4 "Driver; 36V; Power DIP; 600mA Low LevelO/P; 1.2A O/P High Level; 4 Drivers; 7V" H 9850 1650 50  0001 L BNN "Field4"
+F 5 "L293D" H 9850 1650 50  0001 L BNN "Field5"
+F 6 "Unavailable" H 9850 1650 50  0001 L BNN "Field6"
+F 7 "STMicroelectronics" H 9850 1650 50  0001 L BNN "Field7"
+F 8 "None" H 9850 1650 50  0001 L BNN "Field8"
+	1    9850 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L L293D IC?
+U 1 1 5B9287B3
+P 9850 3550
+F 0 "IC?" H 9449 4391 50  0000 L BNN
+F 1 "L293D" H 9449 2648 50  0000 L BNN
+F 2 "DIL16" H 9850 3550 50  0001 L BNN
+F 3 "SOIC-20 STMicroelectronics" H 9850 3550 50  0001 L BNN
+F 4 "Driver; 36V; Power DIP; 600mA Low LevelO/P; 1.2A O/P High Level; 4 Drivers; 7V" H 9850 3550 50  0001 L BNN "Field4"
+F 5 "L293D" H 9850 3550 50  0001 L BNN "Field5"
+F 6 "Unavailable" H 9850 3550 50  0001 L BNN "Field6"
+F 7 "STMicroelectronics" H 9850 3550 50  0001 L BNN "Field7"
+F 8 "None" H 9850 3550 50  0001 L BNN "Field8"
+	1    9850 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L L293D IC?
+U 1 1 5B928843
+P 9850 5450
+F 0 "IC?" H 9449 6291 50  0000 L BNN
+F 1 "L293D" H 9449 4548 50  0000 L BNN
+F 2 "DIL16" H 9850 5450 50  0001 L BNN
+F 3 "SOIC-20 STMicroelectronics" H 9850 5450 50  0001 L BNN
+F 4 "Driver; 36V; Power DIP; 600mA Low LevelO/P; 1.2A O/P High Level; 4 Drivers; 7V" H 9850 5450 50  0001 L BNN "Field4"
+F 5 "L293D" H 9850 5450 50  0001 L BNN "Field5"
+F 6 "Unavailable" H 9850 5450 50  0001 L BNN "Field6"
+F 7 "STMicroelectronics" H 9850 5450 50  0001 L BNN "Field7"
+F 8 "None" H 9850 5450 50  0001 L BNN "Field8"
+	1    9850 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 5550 9100 5550
+Wire Wire Line
+	9100 5550 9100 5350
+Wire Wire Line
+	9100 5350 9250 5350
+Wire Wire Line
+	9100 5450 8950 5450
+Connection ~ 9100 5450
+Wire Wire Line
+	10450 5350 10600 5350
+Wire Wire Line
+	10600 5350 10600 5550
+Wire Wire Line
+	10600 5550 10450 5550
+Wire Wire Line
+	10600 5450 10800 5450
+Connection ~ 10600 5450
+Wire Wire Line
+	9250 3450 9100 3450
+Wire Wire Line
+	9100 3450 9100 3650
+Wire Wire Line
+	9100 3650 9250 3650
+Wire Wire Line
+	9100 3550 8950 3550
+Connection ~ 9100 3550
+Wire Wire Line
+	10450 3450 10650 3450
+Wire Wire Line
+	10650 3450 10650 3650
+Wire Wire Line
+	10650 3650 10450 3650
+Wire Wire Line
+	10650 3550 10850 3550
+Connection ~ 10650 3550
+Wire Wire Line
+	9250 1550 9050 1550
+Wire Wire Line
+	9050 1550 9050 1750
+Wire Wire Line
+	9050 1750 9250 1750
+Wire Wire Line
+	9050 1650 8850 1650
+Connection ~ 9050 1650
+Wire Wire Line
+	10450 1750 10650 1750
+Wire Wire Line
+	10650 1750 10650 1550
+Wire Wire Line
+	10650 1550 10450 1550
+Wire Wire Line
+	10650 1650 10900 1650
+Connection ~ 10650 1650
+Text GLabel 8850 1650 0    60   UnSpc ~ 0
+GND
+Text GLabel 10900 1650 2    60   UnSpc ~ 0
+GND
+Text GLabel 10850 3550 2    60   UnSpc ~ 0
+GND
+Text GLabel 10800 5450 2    60   UnSpc ~ 0
+GND
+Text GLabel 8950 3550 0    60   UnSpc ~ 0
+GND
+Text GLabel 8950 5450 0    60   UnSpc ~ 0
+GND
+$EndSCHEMATC
