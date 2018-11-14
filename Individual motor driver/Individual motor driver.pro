@@ -1,4 +1,4 @@
-update=11/1/2018 8:43:48 AM
+update=11/7/2018 8:57:36 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,3 +60,14 @@ LibName28=contrib
 LibName29=valves
 LibName30=H:/stm32/libraries/bluepill_breakouts
 LibName31=H:/Programs/KiCad/share/l293d/L293D
+LibName32=Current_sensory
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
