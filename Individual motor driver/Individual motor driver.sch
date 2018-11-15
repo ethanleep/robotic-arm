@@ -1022,4 +1022,25 @@ Wire Wire Line
 	3800 2550 3750 2550
 Wire Wire Line
 	1450 3650 1450 3350
+$Comp
+L CONN_01X02 P9
+U 1 1 5BED8ED6
+P 6000 7000
+F 0 "P9" H 6000 7150 50  0000 C CNN
+F 1 "CONN_01X02" V 6100 7000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6000 7000 50  0001 C CNN
+F 3 "" H 6000 7000 50  0000 C CNN
+	1    6000 7000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5950 7200 5950 7300
+Connection ~ 5950 7300
+Wire Wire Line
+	6050 7200 6050 7350
+Wire Wire Line
+	6050 7350 5950 7350
+Wire Wire Line
+	5950 7350 5950 7400
+Connection ~ 5950 7400
 $EndSCHEMATC
