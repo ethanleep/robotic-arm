@@ -316,8 +316,6 @@ Text GLabel 900  4100 0    60   Input ~ 0
 5V
 Text GLabel 1250 3650 2    60   Input ~ 0
 5V
-Text GLabel 2100 5550 0    60   Input ~ 0
-5V
 $Comp
 L R R2
 U 1 1 5BE4C3F5
@@ -403,8 +401,6 @@ Text GLabel 5850 6250 0    60   Input ~ 0
 Rotary_Encoder_1A
 Text GLabel 5850 4850 0    60   Input ~ 0
 Rotary_Encoder_1B
-Text GLabel 5450 5550 0    60   Input ~ 0
-5V
 $Comp
 L R R7
 U 1 1 5BE50C80
@@ -873,14 +869,6 @@ Wire Wire Line
 Wire Wire Line
 	6150 5100 6100 5100
 Wire Wire Line
-	6100 5100 6100 5250
-Wire Wire Line
-	6100 5250 5950 5250
-Wire Wire Line
-	6150 5950 6150 5850
-Wire Wire Line
-	6150 5850 5950 5850
-Wire Wire Line
 	6450 5100 6600 5100
 Wire Wire Line
 	6450 5950 6600 5950
@@ -1022,4 +1010,39 @@ Wire Wire Line
 	3800 2550 3750 2550
 Wire Wire Line
 	1450 3650 1450 3350
+$Comp
+L CONN_01X02 P9
+U 1 1 5BED8ED6
+P 6000 7000
+F 0 "P9" H 6000 7150 50  0000 C CNN
+F 1 "CONN_01X02" V 6100 7000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6000 7000 50  0001 C CNN
+F 3 "" H 6000 7000 50  0000 C CNN
+	1    6000 7000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5950 7200 5950 7300
+Connection ~ 5950 7300
+Wire Wire Line
+	6050 7200 6050 7350
+Wire Wire Line
+	6050 7350 5950 7350
+Wire Wire Line
+	5950 7350 5950 7400
+Connection ~ 5950 7400
+Text GLabel 5450 5550 0    60   Input ~ 0
+3.3v
+Text GLabel 2100 5550 0    60   Input ~ 0
+3.3v
+Wire Wire Line
+	6100 5100 6100 4900
+Wire Wire Line
+	6100 4900 5950 4900
+Connection ~ 5950 4900
+Wire Wire Line
+	6150 5950 6150 6200
+Wire Wire Line
+	6150 6200 5950 6200
+Connection ~ 5950 6200
 $EndSCHEMATC

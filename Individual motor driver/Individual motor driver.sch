@@ -316,8 +316,6 @@ Text GLabel 900  4100 0    60   Input ~ 0
 5V
 Text GLabel 1250 3650 2    60   Input ~ 0
 5V
-Text GLabel 2100 5550 0    60   Input ~ 0
-5V
 $Comp
 L R R2
 U 1 1 5BE4C3F5
@@ -403,8 +401,6 @@ Text GLabel 5850 6250 0    60   Input ~ 0
 Rotary_Encoder_1A
 Text GLabel 5850 4850 0    60   Input ~ 0
 Rotary_Encoder_1B
-Text GLabel 5450 5550 0    60   Input ~ 0
-5V
 $Comp
 L R R7
 U 1 1 5BE50C80
@@ -828,14 +824,6 @@ Wire Wire Line
 Wire Wire Line
 	2800 5100 2750 5100
 Wire Wire Line
-	2750 5100 2750 5250
-Wire Wire Line
-	2750 5250 2600 5250
-Wire Wire Line
-	2800 5950 2800 5850
-Wire Wire Line
-	2800 5850 2600 5850
-Wire Wire Line
 	3100 5100 3250 5100
 Wire Wire Line
 	3100 5950 3250 5950
@@ -872,14 +860,6 @@ Wire Wire Line
 	5950 4850 5950 4950
 Wire Wire Line
 	6150 5100 6100 5100
-Wire Wire Line
-	6100 5100 6100 5250
-Wire Wire Line
-	6100 5250 5950 5250
-Wire Wire Line
-	6150 5950 6150 5850
-Wire Wire Line
-	6150 5850 5950 5850
 Wire Wire Line
 	6450 5100 6600 5100
 Wire Wire Line
@@ -1043,4 +1023,30 @@ Wire Wire Line
 Wire Wire Line
 	5950 7350 5950 7400
 Connection ~ 5950 7400
+Text GLabel 5450 5550 0    60   Input ~ 0
+3.3v
+Text GLabel 2100 5550 0    60   Input ~ 0
+3.3v
+Wire Wire Line
+	6100 5100 6100 4900
+Wire Wire Line
+	6100 4900 5950 4900
+Connection ~ 5950 4900
+Wire Wire Line
+	6150 5950 6150 6200
+Wire Wire Line
+	6150 6200 5950 6200
+Connection ~ 5950 6200
+Wire Wire Line
+	2750 5100 2750 4900
+Wire Wire Line
+	2750 4900 2600 4900
+Connection ~ 2600 4900
+Wire Wire Line
+	2800 5950 2750 5950
+Wire Wire Line
+	2750 5950 2750 6200
+Wire Wire Line
+	2750 6200 2600 6200
+Connection ~ 2600 6200
 $EndSCHEMATC
