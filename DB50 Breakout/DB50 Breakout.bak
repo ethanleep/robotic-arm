@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:DB50 Breakout-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -43,12 +44,12 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CONN_02X25 P?
+L CONN_02X25 P1
 U 1 1 5BFFFCFD
 P 3450 2700
-F 0 "P?" H 3450 4000 50  0000 C CNN
+F 0 "P1" H 3450 4000 50  0000 C CNN
 F 1 "CONN_02X25" V 3450 2700 50  0000 C CNN
-F 2 "" H 3450 1950 50  0000 C CNN
+F 2 "Connector_Dsub:Dsub_50" H 3450 1950 50  0001 C CNN
 F 3 "" H 3450 1950 50  0000 C CNN
 	1    3450 2700
 	1    0    0    -1  
@@ -56,16 +57,22 @@ $EndComp
 Text GLabel 2950 2900 0    60   Input ~ 0
 GND
 Wire Wire Line
-	2950 2900 3200 2900
+	2950 2900 3100 2900
+Wire Wire Line
+	3100 2900 3200 2900
 Wire Wire Line
 	3200 3100 3100 3100
 Wire Wire Line
-	3100 3100 3100 2900
+	3100 3100 3100 3000
+Wire Wire Line
+	3100 3000 3100 2900
 Connection ~ 3100 2900
 Text GLabel 3900 2900 2    60   Input ~ 0
 GND
 Wire Wire Line
-	3900 2900 3700 2900
+	3900 2900 3800 2900
+Wire Wire Line
+	3800 2900 3700 2900
 Wire Wire Line
 	3700 2800 3800 2800
 Connection ~ 3800 2900
@@ -75,20 +82,30 @@ Connection ~ 3800 3000
 Text GLabel 2850 1900 0    60   Input ~ 0
 LED_VCC
 Wire Wire Line
-	2850 1900 3200 1900
+	2850 1900 3050 1900
 Wire Wire Line
-	3800 2800 3800 3000
+	3050 1900 3200 1900
+Wire Wire Line
+	3800 2800 3800 2900
+Wire Wire Line
+	3800 2900 3800 3000
 Wire Wire Line
 	3200 3000 3100 3000
 Connection ~ 3100 3000
 Text GLabel 3900 2700 2    60   Input ~ 0
 LED_VCC
 Wire Wire Line
-	3900 2700 3700 2700
+	3900 2700 3800 2700
+Wire Wire Line
+	3800 2700 3700 2700
 Wire Wire Line
 	3200 2700 3050 2700
 Wire Wire Line
-	3050 1900 3050 2800
+	3050 1900 3050 2000
+Wire Wire Line
+	3050 2000 3050 2700
+Wire Wire Line
+	3050 2700 3050 2800
 Connection ~ 3050 1900
 Wire Wire Line
 	3200 2000 3050 2000
@@ -139,7 +156,7 @@ Wire Wire Line
 	3850 1450 4000 1450
 Text GLabel 2850 1450 0    60   Input ~ 0
 A1_2
-Text GLabel 2550 2500 0    60   Input ~ 0
+Text GLabel 2400 2500 0    60   Input ~ 0
 A1_1
 Wire Wire Line
 	2850 1450 3050 1450
@@ -148,7 +165,7 @@ Wire Wire Line
 Wire Wire Line
 	3050 1500 3200 1500
 Wire Wire Line
-	2550 2500 3200 2500
+	2400 2500 3200 2500
 Text GLabel 4300 3200 2    60   Input ~ 0
 A2_2
 Text GLabel 4050 1600 2    60   Input ~ 0
@@ -171,10 +188,10 @@ Wire Wire Line
 	3050 3950 2900 3950
 Text GLabel 2850 2200 0    60   Input ~ 0
 M2_1
-Text GLabel 4150 3800 2    60   Input ~ 0
+Text GLabel 4250 3800 2    60   Input ~ 0
 M2_2
 Wire Wire Line
-	4150 3800 3700 3800
+	4250 3800 3700 3800
 Wire Wire Line
 	3200 2200 2850 2200
 Text GLabel 3950 2100 2    60   Input ~ 0
@@ -206,31 +223,43 @@ Wire Wire Line
 Wire Wire Line
 	3700 2000 4250 2000
 Text GLabel 2550 2300 0    60   Input ~ 0
-M6_1
+Mrot_1
 Text GLabel 3850 3900 2    60   Input ~ 0
-M6_2
+Mrot_2
 Wire Wire Line
 	3700 3900 3850 3900
 Wire Wire Line
 	2550 2300 3200 2300
 Text GLabel 2950 2600 0    60   Input ~ 0
-Limit_1
+Rot_limit
 Wire Wire Line
 	2950 2600 3200 2600
 Text GLabel 2150 1800 0    60   Input ~ 0
-Limit_2
+Limit_1
 Wire Wire Line
 	2150 1800 3200 1800
 Text GLabel 4350 2600 2    60   Input ~ 0
-Limit_3
+Limit_2
 Wire Wire Line
 	3700 2600 4350 2600
 Text GLabel 3850 1800 2    60   Input ~ 0
-Limit_4
+Limit_3
 Wire Wire Line
 	3850 1800 3700 1800
 Text GLabel 4350 1700 2    60   Input ~ 0
-Limit_5
+Limit_4
 Wire Wire Line
 	4350 1700 3700 1700
+Text GLabel 6000 1350 0    60   Input ~ 0
+GND
+Text GLabel 6000 1500 0    60   Input ~ 0
+ROT_1
+Text GLabel 6000 1650 0    60   Input ~ 0
+ROT_2
+Text GLabel 6000 1800 0    60   Input ~ 0
+Mrot_1
+Text GLabel 6000 1950 0    60   Input ~ 0
+Mrot_2
+Text GLabel 6000 2100 0    60   Input ~ 0
+Rot_limit
 $EndSCHEMATC
