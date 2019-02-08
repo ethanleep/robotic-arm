@@ -1,3 +1,4 @@
+
 const char address = 2;
 
 #include <Wire_slave.h>
@@ -5,10 +6,11 @@ const char address = 2;
 const int led = PC13;
 const int r1 = PB14;
 const int r2 = PB15;
-volatile int32_t pos = 21412;
+volatile int32_t pos = 0;
 int32_t reqpos = 0;
 const int motor1 = PB0;
 const int motor2 = PB1;
+volatile bool mov = 0;
 
 void setup() {
   pinMode(r1, INPUT_PULLUP);
@@ -27,7 +29,13 @@ void setup() {
 }
 
 void loop() {
-  noTone(led);
+  if (mov == 1) {
+    moving();
+    mov = 0;
+  }
+  else {
+    noTone(3);
+  }
 }
 
 void com(int num) {
@@ -43,7 +51,7 @@ void com(int num) {
     reqpos = (reqpos << 8) | b;
     reqpos = (reqpos << 8) | c;
     reqpos = (reqpos << 8) | d;
-    moving();
+    mov = 1;
     Serial.print("movin` to ");
     Serial.println(reqpos);
   }
@@ -59,21 +67,18 @@ void posend() {
 }
 
 void moving() {
-  Wire.end();
-  tone(led, 3);
-  while (reqpos > pos) {
-    digitalWrite(motor1, HIGH);
-    digitalWrite(motor2, LOW);
+  while (reqpos != pos) {
+    if (reqpos > pos) {
+      digitalWrite(motor1, HIGH);
+      digitalWrite(motor2, LOW);
+    }
+    if (reqpos < pos) {
+      digitalWrite(motor1, LOW);
+      digitalWrite(motor2, HIGH);
+    }
   }
-  while (reqpos < pos) {
-    digitalWrite(motor1, LOW);
-    digitalWrite(motor2, HIGH);
-  }
-  if (reqpos == pos) {
-    digitalWrite(motor1, LOW);
-    digitalWrite(motor2, LOW);
-    Wire.begin(address);
-  }
+  digitalWrite(motor1, LOW);
+  digitalWrite(motor2, LOW);
 }
 
 void rot1() {
@@ -114,4 +119,3 @@ void rot2() {
     }
   }
 }
-
